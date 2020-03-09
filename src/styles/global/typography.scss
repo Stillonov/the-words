@@ -1,0 +1,37 @@
+html,
+body {
+    color: $color-font;
+    font-family: $font-family--sansSerif;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    color: $color-heading;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+
+    & + & {
+        margin-top: 16px;
+    }
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+}

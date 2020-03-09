@@ -1,0 +1,15 @@
+
+// Global
+// Variables, mixins, extends, reset etc.
+//---------------------------------
+
+@import "variables.scss";
+@import "global/fonts.scss";
+@import "global/reboot.scss";
+@import "global/typography.scss";
+@import "global/display.scss";
+
+// Components
+//---------------------------------
+
+@import "components/icon.scss";

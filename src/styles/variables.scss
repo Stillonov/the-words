@@ -1,0 +1,64 @@
+
+// Colors
+//---------------------------------
+
+// Black and white
+
+$color-white:                   #fff !default;
+$color-grey--l10:               #f5f8fb !default;
+$color-grey:                    #c7c7c7 !default;
+$color-grey--d10:               #b2b2b2 !default;
+$color-black:                   #000 !default;
+
+// Base
+
+$color-red:                     #d70012 !default;
+$color-pink:                    #e91e63 !default;
+$color-purple:                  #9c27b0 !default;
+$color-deep-purple:             #673ab7 !default;
+$color-indigo:                  #3f51b5 !default;
+$color-blue:                    #0028ec !default;
+$color-light-blue:              #03a9f4 !default;
+$color-cyan:                    #00bcd4 !default;
+$color-teal:                    #009688 !default;
+$color-green:                   #00b371 !default;
+$color-lime:                    #cddc39 !default;
+$color-yellow:                  #ffd55f !default;
+$color-amber:                   #ffc107 !default;
+$color-orange:                  #ff9800 !default;
+$color-deep-orange:             #ff5722 !default;
+$color-brown:                   #795548 !default;
+
+$color-bg:                      $color-white !default;
+$color-font:                    $color-black !default;
+$color-link:                    $color-black !default;
+$color-heading:                 $color-black !default;
+
+// Viewports
+//---------------------------------
+
+$viewport--xs:                  320px !default; // - mobile
+$viewport--sm:                  360px !default; // - mobile
+$viewport--md:                  600px !default; // - tablet
+$viewport--lg:                  1080px !default; // - desktop
+$viewport--xl:                  1280px !default; // - desktop
+
+$viewport--xs-max:              $viewport--sm - 0.02px !default;
+$viewport--sm-max:              $viewport--md - 0.02px !default;
+$viewport--md-max:              $viewport--lg - 0.02px !default;
+$viewport--lg-max:              $viewport--xl - 0.02px !default;
+
+// Typography
+//---------------------------------
+
+$font-family--sansSerif:        arial, sans-serif !default;
+$font-family--serif:            georgia, "Times New Roman", times, serif !default;
+$font-family--monospace:        monaco, menlo, consolas, "Courier New", monospace !default;
+
+// Z-index
+//---------------------------------
+
+$z-index-overlay:               1000 !default;
+$z-index-sidebar:               2000 !default;
+$z-index-header:                3000 !default;
+$z-index-modal:                 4000 !default;
