@@ -28,10 +28,10 @@ $color-brown:                   #795548 !default;
 $color-primary:                 #e6e5dd !default;
 $color-secondary:               #b6b39a !default;
 
-$color-bg:                      $color-black !default;
-$color-font:                    $color-primary !default;
-$color-link:                    $color-primary !default;
-$color-heading:                 $color-secondary !default;
+$color-bg:                      $color-black;
+$color-font:                    $color-primary;
+$color-link:                    $color-primary;
+$color-heading:                 $color-secondary;
 
 // Viewports
 //---------------------------------
@@ -50,8 +50,13 @@ $viewport--lg-max:              $viewport--xl - 0.02px !default;
 // Typography
 //---------------------------------
 
-$font-family--arial:            "Arial", "Helvetica Neue", "Helvetica", "sans-serif" !default;
-$font-family--georgia:          "Georgia", "Times", "Times New Roman", "serif" !default;
+$font-family--arial:            "Arial", "Helvetica Neue", "Helvetica", sans-serif !default;
+$font-family--georgia:          "Georgia", "Times", "Times New Roman", serif !default;
+$font-family--noto-sans:        "Noto Sans", sans-serif !default;
+$font-family--montserrat:       "Montserrat", sans-serif !default;
+
+$font-family--primary:          $font-family--noto-sans;
+$font-family--secondary:        $font-family--montserrat;
 
 // Z-index
 //---------------------------------

@@ -1,7 +1,7 @@
 html,
 body {
     color: $color-font;
-    font-family: $font-family--sansSerif;
+    font-family: $font-family--primary;
     font-size: 14px;
     line-height: 1;
     font-weight: 400;
@@ -17,7 +17,8 @@ h6 {
     margin: 0;
     padding: 0;
     color: $color-heading;
-    font-weight: 400;
+    font-family: $font-family--secondary;
+    font-weight: 900;
     font-style: normal;
     text-transform: uppercase;
 }
@@ -33,5 +34,4 @@ p {
 
 a {
     color: $color-link;
-    text-decoration: none;
 }
