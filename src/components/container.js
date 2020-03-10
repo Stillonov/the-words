@@ -5,21 +5,19 @@ import cn from 'classnames';
 import styles from './container.module.scss';
 
 const Container = ({ className, children }) => (
-  <div className={cn([styles.root, className])}>
-    {children}
-  </div>
+    <div className={cn([styles.root, className])}>{children}</div>
 );
 
 Container.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+    className: PropTypes.string,
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
 };
 
 Container.defaultProps = {
-  children: null,
+    children: null,
 };
 
 export default Container;

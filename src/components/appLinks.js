@@ -7,22 +7,22 @@ import BadgeAppStoreSvg from '../images/badge-app-store-b.inline.svg';
 import BadgeGooglePlaySvg from '../images/badge-google-play-b.inline.svg';
 
 const AppLinks = ({ className }) => (
-  <div className={cn([styles.root, className])}>
-    <a className={styles.link} href="/">
-      <BadgeAppStoreSvg className={styles.badgeAppStore} />
-    </a>
-    <a className={styles.link} href="/">
-      <BadgeGooglePlaySvg className={styles.badgeGooglePlus} />
-    </a>
-  </div>
+    <div className={cn([styles.root, className])}>
+        <a className={styles.link} href="/">
+            <BadgeAppStoreSvg className={styles.badgeAppStore} />
+        </a>
+        <a className={styles.link} href="/">
+            <BadgeGooglePlaySvg className={styles.badgeGooglePlus} />
+        </a>
+    </div>
 );
 
 AppLinks.propTypes = {
-  className: PropTypes.string,
+    className: PropTypes.string,
 };
 
 AppLinks.defaultProps = {
-  className: '',
+    className: '',
 };
 
 export default AppLinks;

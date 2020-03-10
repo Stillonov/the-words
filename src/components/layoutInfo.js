@@ -7,14 +7,14 @@ import '../styles/index.scss';
 import Header from './header';
 
 const LayoutInfo = ({ children }) => (
-  <>
-    <Header />
-    <main>{children}</main>
-  </>
+    <>
+        <Header />
+        <main>{children}</main>
+    </>
 );
 
 LayoutInfo.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 export default LayoutInfo;

@@ -7,25 +7,23 @@ import styles from './header.module.scss';
 import LogoTheWordsSvg from '../images/logo-the-words.inline.svg';
 
 const Header = ({ description }) => (
-  <header className={styles.root}>
-    <Container className={styles.container}>
-      <Link className={styles.logo} to="/">
-        <LogoTheWordsSvg />
-      </Link>
+    <header className={styles.root}>
+        <Container className={styles.container}>
+            <Link className={styles.logo} to="/">
+                <LogoTheWordsSvg />
+            </Link>
 
-      <div className={styles.description}>
-        {description}
-      </div>
-    </Container>
-  </header>
+            <div className={styles.description}>{description}</div>
+        </Container>
+    </header>
 );
 
 Header.propTypes = {
-  description: PropTypes.string,
+    description: PropTypes.string,
 };
 
 Header.defaultProps = {
-  description: '',
+    description: '',
 };
 
 export default Header;
