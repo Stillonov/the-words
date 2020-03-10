@@ -7,24 +7,24 @@
   align-items: center;
 }
 
-.badge {
+.link {
   display: block;
   flex: 0 1 auto;
-  height: 40px;
-  background: transparent no-repeat 50% 50%;
-  background-size: contain;
 
   & + & {
     margin-left: 16px;
   }
 }
 
+.badge-app-store,
+.badge-google-plus {
+  height: 40px;
+}
+
 .badge-app-store {
   width: 120px;
-  background-image: url("../images/badge-app-store.svg");
 }
 
 .badge-google-plus {
   width: 135px;
-  background-image: url("../images/badge-google-play.svg");
 }

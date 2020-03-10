@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import Container from './container';
-import Badges from './badges';
+import AppLinks from './appLinks';
 import styles from './footer.module.scss';
 import LogoUnionSvg from '../images/logo-union.inline.svg';
 
 const Footer = ({ description }) => (
   <footer className={styles.root}>
     <Container className={styles.container}>
-      <Badges />
+      <AppLinks />
 
       <nav className={styles.nav}>
         <ul>
