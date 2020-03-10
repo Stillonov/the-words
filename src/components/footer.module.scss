@@ -11,13 +11,21 @@
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 32px;
+
+  @media (min-width: $viewport--sm) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .nav {
+  flex: 1 1 auto;
+  order: 2;
+
   ul {
     display: flex;
     flex-direction: row;
@@ -27,22 +35,62 @@
     padding: 0;
     list-style: none;
   }
-}
 
-  .nav-item {
+  &-item {
     flex: 0 1 auto;
-    margin-left: 32px;
+    margin-left: 16px;
+
+    @media (min-width: $viewport--sm) {
+      margin-left: 24px;
+    }
+
+    @media (min-width: $viewport--lg) {
+      margin-left: 32px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      @media (min-width: $viewport--sm) {
+        margin-left: 24px;
+      }
+
+      @media (min-width: $viewport--lg) {
+        margin-left: 32px;
+      }
+    }
   }
 
-  .nav-link {
+  &-link {
     color: $color-primary;
     font-size: 14px;
     line-height: 19px;
     text-decoration: none;
     text-transform: uppercase;
+    white-space: nowrap;
+
+    @media (hover: hover) and (min-width: $viewport--lg) {
+      &:hover {
+        color: $color-secondary;
+        transition: color 0.3s ease-in;
+      }
+    }
   }
+}
 
 .logo {
+  flex: 0 1 auto;
+  order: 1;
+  margin: 0 0 10px;
+
+  @media (min-width: $viewport--sm) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $viewport--lg) {
+    order: 3;
+  }
+
   :global {
     .svg-interactive {
       fill: $color-secondary;

@@ -35,5 +35,13 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  }
+  },
+  "browserslist": [
+    "> 0.2%",
+    "ie 11",
+    "not dead",
+    "not op_mini all",
+    "not iOS < 12",
+    "not Safari < 11"
+  ]
 }

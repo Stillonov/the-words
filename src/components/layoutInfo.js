@@ -5,20 +5,16 @@ import 'normalize.css/normalize.css';
 import '../styles/index.scss';
 
 import Header from './header';
-import Footer from "./footer"
 
-const LayoutMain = ({ children }) => (
+const LayoutInfo = ({ children }) => (
   <>
-    <Header
-      description="Applications for anonymous story publishing and discussion"
-    />
+    <Header />
     <main>{children}</main>
-    <Footer />
   </>
 );
 
-LayoutMain.propTypes = {
+LayoutInfo.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default LayoutMain;
+export default LayoutInfo;

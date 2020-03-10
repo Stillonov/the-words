@@ -10,15 +10,15 @@ import LogoUnionSvg from '../images/logo-union-b.inline.svg';
 const Footer = () => (
   <footer className={styles.root}>
     <Container className={styles.container}>
-      <AppLinks />
+      <AppLinks className="d-none d-lg-flex" />
 
       <nav className={styles.nav}>
         <ul>
           <li className={styles.navItem}>
-            <Link className={styles.navLink} to="/">Privacy policy</Link>
+            <Link className={styles.navLink} to="/privacy">Privacy policy</Link>
           </li>
           <li className={styles.navItem}>
-            <Link className={styles.navLink} to="/">Copyright policy</Link>
+            <Link className={styles.navLink} to="/copyright">Copyright policy</Link>
           </li>
         </ul>
       </nav>
