@@ -2,15 +2,11 @@
 // Colors
 //---------------------------------
 
-// Black and white
-
 $color-white:                   #fff !default;
 $color-grey--l10:               #f5f8fb !default;
 $color-grey:                    #c7c7c7 !default;
 $color-grey--d10:               #b2b2b2 !default;
 $color-black:                   #000 !default;
-
-// Base
 
 $color-red:                     #d70012 !default;
 $color-pink:                    #e91e63 !default;
@@ -29,24 +25,22 @@ $color-orange:                  #ff9800 !default;
 $color-deep-orange:             #ff5722 !default;
 $color-brown:                   #795548 !default;
 
-$color-bg:                      $color-white !default;
+$color-primary:                 #b6b39a !default;
+$color-secondary:               #e6e5dd !default;
+
+$color-bg:                      $color-black !default;
 $color-font:                    $color-black !default;
 $color-link:                    $color-black !default;
 $color-heading:                 $color-black !default;
 
-$color-a: #E6E5DD;
-$color-b: #B6B39A;
-
-$gradient-a: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 80.21%, rgba(0, 0, 0, 0.8) 100%);
-
 // Viewports
 //---------------------------------
 
-$viewport--xs:                  320px !default; // - mobile
-$viewport--sm:                  360px !default; // - mobile
-$viewport--md:                  600px !default; // - tablet
-$viewport--lg:                  1080px !default; // - desktop
-$viewport--xl:                  1280px !default; // - desktop
+$viewport--xs:                  320px !default;
+$viewport--sm:                  360px !default;
+$viewport--md:                  600px !default;
+$viewport--lg:                  1080px !default;
+$viewport--xl:                  1280px !default;
 
 $viewport--xs-max:              $viewport--sm - 0.02px !default;
 $viewport--sm-max:              $viewport--md - 0.02px !default;
@@ -56,9 +50,8 @@ $viewport--lg-max:              $viewport--xl - 0.02px !default;
 // Typography
 //---------------------------------
 
-$font-family--sansSerif:        arial, sans-serif !default;
-$font-family--serif:            georgia, "Times New Roman", times, serif !default;
-$font-family--monospace:        monaco, menlo, consolas, "Courier New", monospace !default;
+$font-family--arial:            "Arial", "Helvetica Neue", "Helvetica", "sans-serif" !default;
+$font-family--georgia:          "Georgia", "Times", "Times New Roman", "serif" !default;
 
 // Z-index
 //---------------------------------
