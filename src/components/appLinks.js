@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styles from './appLinks.module.scss';
-import BadgeAppStoreSvg from '../images/badge-app-store.inline.svg'
-import BadgeGooglePlaySvg from '../images/badge-google-play.inline.svg'
+import BadgeAppStoreSvg from '../images/badge-app-store-b.inline.svg'
+import BadgeGooglePlaySvg from '../images/badge-google-play-b.inline.svg'
 
 const AppLinks = () => (
   <div className={styles.root}>

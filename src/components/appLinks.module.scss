@@ -19,6 +19,21 @@
 .badge-app-store,
 .badge-google-plus {
   height: 40px;
+
+  :global {
+    .svg-interactive {
+      fill: $color-primary;
+      transition: fill 0.3s ease-in;
+    }
+  }
+
+  &:hover {
+    :global {
+      .svg-interactive {
+        fill: $color-secondary;
+      }
+    }
+  }
 }
 
 .badge-app-store {
