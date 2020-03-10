@@ -5,9 +5,9 @@ import { Link } from 'gatsby';
 import Container from './container';
 import AppLinks from './appLinks';
 import styles from './footer.module.scss';
-import LogoUnionSvg from '../images/logo-union.inline.svg';
+import LogoUnionSvg from '../images/logo-union-b.inline.svg';
 
-const Footer = ({ description }) => (
+const Footer = () => (
   <footer className={styles.root}>
     <Container className={styles.container}>
       <AppLinks />
@@ -23,9 +23,9 @@ const Footer = ({ description }) => (
         </ul>
       </nav>
 
-      <div>
-        <a href="/"><LogoUnionSvg /></a>
-      </div>
+      <a className={styles.logo} href="/">
+        <LogoUnionSvg />
+      </a>
     </Container>
   </footer>
 );

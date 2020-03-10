@@ -29,15 +29,34 @@
   }
 }
 
-.nav-item {
-  flex: 0 1 auto;
-  margin-left: 32px;
-}
+  .nav-item {
+    flex: 0 1 auto;
+    margin-left: 32px;
+  }
 
-.nav-link {
-  color: $color-primary;
-  font-size: 14px;
-  line-height: 19px;
-  text-decoration: none;
-  text-transform: uppercase;
+  .nav-link {
+    color: $color-primary;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+.logo {
+  :global {
+    .svg-interactive {
+      fill: $color-secondary;
+      transition: fill 0.3s ease-in;
+    }
+  }
+
+  @media (hover: hover) and (min-width: $viewport--lg) {
+    &:hover {
+      :global {
+        .svg-interactive {
+          fill: $color-primary;
+        }
+      }
+    }
+  }
 }

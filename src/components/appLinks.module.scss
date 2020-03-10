@@ -27,10 +27,12 @@
     }
   }
 
-  &:hover {
-    :global {
-      .svg-interactive {
-        fill: $color-secondary;
+  @media (hover: hover) and (min-width: $viewport--lg) {
+    &:hover {
+      :global {
+        .svg-interactive {
+          fill: $color-secondary;
+        }
       }
     }
   }
