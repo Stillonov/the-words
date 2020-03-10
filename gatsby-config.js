@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'The Words',
-    description: '',
+    description: 'Applications for anonymous story publishing and discussion',
     author: '',
   },
   plugins: [

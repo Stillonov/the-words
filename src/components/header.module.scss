@@ -1,7 +1,8 @@
 @import "src/styles/variables";
 
 .root {
-
+  position: relative;
+  z-index: $z-index-header;
 }
 
 .container {

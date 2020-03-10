@@ -37,9 +37,9 @@ $color-heading:                 $color-secondary;
 //---------------------------------
 
 $viewport--xs:                  320px !default;
-$viewport--sm:                  360px !default;
-$viewport--md:                  600px !default;
-$viewport--lg:                  1080px !default;
+$viewport--sm:                  375px !default;
+$viewport--md:                  768px !default;
+$viewport--lg:                  1025px !default;
 $viewport--xl:                  1280px !default;
 
 $viewport--xs-max:              $viewport--sm - 0.02px !default;

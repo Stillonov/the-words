@@ -1,0 +1,14 @@
+@import "src/styles/variables";
+
+.root {
+  @media (min-width: $viewport--lg) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.container {
+  padding-bottom: 32px;
+}

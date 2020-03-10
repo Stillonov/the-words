@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
 import 'normalize.css/normalize.css';
 import '../styles/index.scss';
 
-const Layout = ({ children }) => {
+import Header from './header';
+import Footer from "./footer"
+
+const LayoutMain = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          description
         }
       }
     }
@@ -19,17 +21,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header description="Applications for anonymous story publishing and discussion" />
+      <Header description={data.site.siteMetadata.description} />
 
-      <div>
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
+
+      <Footer />
     </>
   );
 };
 
-Layout.propTypes = {
+LayoutMain.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default LayoutMain;
