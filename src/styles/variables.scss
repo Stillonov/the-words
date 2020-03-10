@@ -25,13 +25,13 @@ $color-orange:                  #ff9800 !default;
 $color-deep-orange:             #ff5722 !default;
 $color-brown:                   #795548 !default;
 
-$color-primary:                 #b6b39a !default;
-$color-secondary:               #e6e5dd !default;
+$color-primary:                 #e6e5dd !default;
+$color-secondary:               #b6b39a !default;
 
 $color-bg:                      $color-black !default;
-$color-font:                    $color-black !default;
-$color-link:                    $color-black !default;
-$color-heading:                 $color-black !default;
+$color-font:                    $color-primary !default;
+$color-link:                    $color-primary !default;
+$color-heading:                 $color-secondary !default;
 
 // Viewports
 //---------------------------------

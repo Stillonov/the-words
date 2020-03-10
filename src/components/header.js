@@ -1,21 +1,28 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+
+import styles from './header.module.scss';
+import LogoTheWordsSvg from '../images/logo-the-words.svg';
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header className={styles.root}>
     <Link to="/">
-      {siteTitle}
+      <LogoTheWordsSvg className={styles.logo} />
     </Link>
+
+    <div>
+      Applications for anonymous story publishing and discussion
+    </div>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: '',
+};
 
-export default Header
+export default Header;
