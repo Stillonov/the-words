@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 import Container from './container';
 import styles from './header.module.scss';
-import LogoTheWordsSvg from '../images/logo-the-words.svg';
+import LogoTheWordsSvg from '../images/logo-the-words.inline.svg';
 
 const Header = ({ description }) => (
   <header className={styles.root}>
