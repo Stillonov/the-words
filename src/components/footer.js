@@ -10,7 +10,7 @@ import LogoUnionSvg from '../images/logo-union-b.inline.svg';
 const Footer = () => (
     <footer className={styles.root}>
         <Container className={styles.container}>
-            <AppLinks className="d-none d-lg-flex" />
+            <AppLinks className="d-none d-md-flex" />
 
             <nav className={styles.nav}>
                 <ul>

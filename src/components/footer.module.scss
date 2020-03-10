@@ -1,7 +1,7 @@
 @import "src/styles/variables";
 
 .root {
-  @media (min-width: $viewport--lg) {
+  @media (min-width: $viewport--md) {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -14,6 +14,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-top: 32px;
   padding-bottom: 32px;
 
   @media (min-width: $viewport--sm) {
@@ -44,7 +45,7 @@
       margin-left: 24px;
     }
 
-    @media (min-width: $viewport--lg) {
+    @media (min-width: $viewport--md) {
       margin-left: 32px;
     }
 
@@ -55,7 +56,7 @@
         margin-left: 24px;
       }
 
-      @media (min-width: $viewport--lg) {
+      @media (min-width: $viewport--md) {
         margin-left: 32px;
       }
     }
@@ -69,7 +70,7 @@
     text-transform: uppercase;
     white-space: nowrap;
 
-    @media (hover: hover) and (min-width: $viewport--lg) {
+    @media (hover: hover) and (min-width: $viewport--md) {
       &:hover {
         color: $color-secondary;
         transition: color 0.3s ease-in;
@@ -87,7 +88,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $viewport--lg) {
+  @media (min-width: $viewport--md) {
     order: 3;
   }
 
@@ -98,7 +99,7 @@
     }
   }
 
-  @media (hover: hover) and (min-width: $viewport--lg) {
+  @media (hover: hover) and (min-width: $viewport--md) {
     &:hover {
       :global {
         .svg-interactive {
