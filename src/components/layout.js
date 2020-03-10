@@ -19,7 +19,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header description="Applications for anonymous story publishing and discussion" />
+
       <div>
         <main>{children}</main>
       </div>

@@ -2,27 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
+import Container from './container';
 import styles from './header.module.scss';
 import LogoTheWordsSvg from '../images/logo-the-words.svg';
 
-const Header = ({ siteTitle }) => (
+const Header = ({ description }) => (
   <header className={styles.root}>
-    <Link to="/">
-      <LogoTheWordsSvg className={styles.logo} />
-    </Link>
+    <Container className={styles.container}>
+      <Link className={styles.logo} to="/">
+        <LogoTheWordsSvg />
+      </Link>
 
-    <div>
-      Applications for anonymous story publishing and discussion
-    </div>
+      <div className={styles.description}>
+        {description}
+      </div>
+    </Container>
   </header>
 );
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  description: PropTypes.string,
 };
 
 Header.defaultProps = {
-  siteTitle: '',
+  description: '',
 };
 
 export default Header;
