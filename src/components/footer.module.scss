@@ -63,6 +63,7 @@
   }
 
   &-link {
+    opacity: 1;
     color: $color-primary;
     font-size: 14px;
     line-height: 19px;
@@ -80,6 +81,7 @@
 }
 
 .logo {
+  opacity: 1;
   flex: 0 1 auto;
   order: 1;
   margin: 0 0 10px;
