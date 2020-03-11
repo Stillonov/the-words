@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import Container from './container';
 import AppLinks from './appLinks';
 import styles from './footer.module.scss';
-import LogoUnionSvg from '../images/logo-union-b.inline.svg';
+import LogoUnionSvg from '../images/logo-union.inline.svg';
 
 const Footer = () => (
     <footer className={styles.root}>
