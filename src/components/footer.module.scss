@@ -69,11 +69,11 @@
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
+    transition: opacity 0.3s ease-in;
 
     @media (hover: hover) and (min-width: $viewport--md) {
       &:hover {
-        color: $color-secondary;
-        transition: color 0.3s ease-in;
+        opacity: 0.8;
       }
     }
   }
@@ -83,6 +83,7 @@
   flex: 0 1 auto;
   order: 1;
   margin: 0 0 10px;
+  transition: opacity 0.3s ease-in;
 
   @media (min-width: $viewport--sm) {
     margin-bottom: 0;
@@ -92,20 +93,9 @@
     order: 3;
   }
 
-  :global {
-    .svg-interactive {
-      fill: $color-secondary;
-      transition: fill 0.3s ease-in;
-    }
-  }
-
   @media (hover: hover) and (min-width: $viewport--md) {
     &:hover {
-      :global {
-        .svg-interactive {
-          fill: $color-primary;
-        }
-      }
+      opacity: 0.8;
     }
   }
 }
