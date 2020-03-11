@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import styles from './appLinks.module.scss';
-import BadgeAppStoreSvg from '../images/badge-app-store-b.inline.svg';
-import BadgeGooglePlaySvg from '../images/badge-google-play-b.inline.svg';
+import BadgeAppStoreSvg from '../images/badge-app-store.inline.svg';
+import BadgeGooglePlaySvg from '../images/badge-google-play.inline.svg';
 
 const AppLinks = ({ className }) => (
     <div className={cn([styles.root, className])}>
