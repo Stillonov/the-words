@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-Import cn from 'classnames';
+import cn from 'classnames';
 import { Link } from 'gatsby';
 
 import Container from './container';
