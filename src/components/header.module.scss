@@ -1,8 +1,12 @@
 @import "src/styles/variables";
 
 .root {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: $z-index-header;
+  width: 100%;
+  background: $gradient-header;
 }
 
 .container {
@@ -14,14 +18,25 @@
   display: block;
   width: 100px;
   height: 40px;
-  margin: 0 0 8px;
+  margin: 0;
   padding: 0;
 }
 
+.title,
 .description {
   max-width: 300px;
+  margin: 0;
+  padding: 0;
   color: $color-secondary;
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
+}
+
+.title {
+  padding-top: 32px;
+}
+
+.description {
+  padding-top: 8px;
 }

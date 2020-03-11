@@ -4,12 +4,22 @@ import cn from 'classnames';
 
 import styles from './container.module.scss';
 
-const Container = ({ className, children }) => (
-    <div className={cn([styles.root, className])}>{children}</div>
-);
+const Container = ({ className, size, children }) => {
+    const sizeCapitalized = size.charAt(0).toUpperCase() + size.slice(1);
+
+    return <div className={cn([
+            styles.root,
+            className,
+            styles[`rootSize${sizeCapitalized}`],
+        ]
+    )}>
+        {children}
+    </div>;
+};
 
 Container.propTypes = {
     className: PropTypes.string,
+    size: PropTypes.string,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node,
@@ -18,6 +28,7 @@ Container.propTypes = {
 
 Container.defaultProps = {
     children: null,
+    size: '',
 };
 
 export default Container;

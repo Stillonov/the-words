@@ -16,12 +16,12 @@ const Footer = () => (
                 <ul>
                     <li className={styles.navItem}>
                         <Link className={styles.navLink} to="/privacy">
-                            Privacy policy
+                            Privacy Policy
                         </Link>
                     </li>
                     <li className={styles.navItem}>
                         <Link className={styles.navLink} to="/copyright">
-                            Copyright policy
+                            Copyright Policy
                         </Link>
                     </li>
                 </ul>

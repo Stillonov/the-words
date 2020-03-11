@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 
 const CopyrightPage = () => (
     <LayoutInfo>
-        <SEO title="Copyright policy" />
+        <SEO title="Copyright Policy" />
     </LayoutInfo>
 );
 
