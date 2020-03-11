@@ -11,7 +11,7 @@ const PrivacyPage = () => {
         <LayoutInfo title={pageTitle}>
             <SEO title={pageTitle} />
 
-            <Container size="md">
+            <Container className="html" size="md">
                 <p>We believe that you should always know what kind of data we collect from you, how we collect it, and how you can have control over your data. We strive to be transparent in our data collection efforts and to provide you with the data that you need to make decisions about our collection of data from you. This is the purpose of our privacy policy.</p>
                 <p>There are certain things that you should be aware of when using our website and mobile applications. First, the iFunny website and mobile applications are publicly accessible and searchable to users and visitors around the world. This means that anything that you post to the iFunny website and mobile applications may be viewable by third parties. Second, since anything that you post to the iFunny website or mobile applications are tied to your user account, your postings may not be anonymous. If you prefer to protect your privacy while using the iFunny website and mobile applications, we recommend that you use the service under a pseudonym.</p>
                 <p>When you use the iFunny website and mobile applications, even if you are just browsing, we may collect some basic data from you such as the type of mobile device that you are using, your geographical location, and your IP address. If you choose to create a user account, you can choose to share additional data with us, which is outlined below. We also provide you with the ability to limit the data that we collect from you and how we use it.</p>
