@@ -6,7 +6,7 @@ import Container from './container';
 import styles from './header.module.scss';
 import LogoTheWordsSvg from '../images/logo-the-words.inline.svg';
 
-const Header = ({ title, description }) => (
+const Header = ({ fixed, title, description }) => (
     <header className={styles.root}>
         <Container className={styles.container}>
             <Link className={styles.logo} to="/">
@@ -23,11 +23,13 @@ const Header = ({ title, description }) => (
 );
 
 Header.propTypes = {
+    fixed: PropTypes.bool,
     title: PropTypes.string,
     description: PropTypes.string,
 };
 
 Header.defaultProps = {
+    fixed: false,
     title: '',
     description: '',
 };
