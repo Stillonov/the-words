@@ -10,7 +10,7 @@
 .link {
   display: block;
   flex: 0 1 auto;
-  transition: opacity 0,3s ease-in;
+  transition: opacity 0.3s ease-in;
 
   & + & {
     margin-left: 16px;
@@ -18,7 +18,7 @@
 
   @media (hover: hover) and (min-width: $viewport--lg) {
     &:hover {
-      opacity: 0,8;
+      opacity: 0.8;
     }
   }
 
