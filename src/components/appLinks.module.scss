@@ -10,32 +10,23 @@
 .link {
   display: block;
   flex: 0 1 auto;
+  transition: opacity 0,3s ease-in;
 
   & + & {
     margin-left: 16px;
   }
+
+  @media (hover: hover) and (min-width: $viewport--lg) {
+    &:hover {
+      opacity: 0,8;
+    }
+  }
+
 }
 
 .badge-app-store,
 .badge-google-plus {
   height: 40px;
-
-  :global {
-    .svg-interactive {
-      fill: $color-primary;
-      transition: fill 0.3s ease-in;
-    }
-  }
-
-  @media (hover: hover) and (min-width: $viewport--lg) {
-    &:hover {
-      :global {
-        .svg-interactive {
-          fill: $color-secondary;
-        }
-      }
-    }
-  }
 }
 
 .badge-app-store {
