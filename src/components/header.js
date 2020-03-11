@@ -8,7 +8,7 @@ import styles from './header.module.scss';
 import LogoTheWordsSvg from '../images/logo-the-words.inline.svg';
 
 const Header = ({ fixed, title, description }) => (
-    <header className={cn([styles.root, { styles.rootFixed: fixed] })}>
+    <header className={cn([styles.root, { styles.rootFixed: fixed }])}>
         <Container className={styles.container}>
             <Link className={styles.logo} to="/">
                 <LogoTheWordsSvg />
