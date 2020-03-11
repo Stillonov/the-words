@@ -1,9 +1,7 @@
 @import "src/styles/variables";
 
 .root {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: $z-index-header;
   width: 100%;
 
@@ -21,6 +19,12 @@
       height: 100%;
       background: $gradient-header--desktop;
     }
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 }
 
