@@ -36,7 +36,8 @@ $color-heading:                 $color-secondary;
 // Gradients
 //---------------------------------
 
-$gradient-header:               linear-gradient(180deg, rgba($color-black, 1) 0%, rgba($color-black, 0) 100%);
+$gradient-header:               linear-gradient(180deg, rgba($color-black, 1) 55%, rgba($color-black, 0) 100%);
+$gradient-header--desktop:      linear-gradient(180deg, rgba($color-black, 1) 0%, rgba($color-black, 0) 100%);
 
 // Viewports
 //---------------------------------

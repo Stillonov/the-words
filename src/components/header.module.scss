@@ -6,7 +6,23 @@
   left: 0;
   z-index: $z-index-header;
   width: 100%;
-  background: $gradient-header;
+
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 200px; // In design: 240px;
+    content: " ";
+    background: $gradient-header;
+
+    @media (min-width: $viewport--xl) {
+      height: 125px;
+      background: $gradient-header--desktop;
+    }
+  }
 }
 
 .container {
@@ -35,6 +51,7 @@
 
 .title {
   padding-top: 32px;
+  font-weight: 700;
 }
 
 .description {

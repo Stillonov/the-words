@@ -2,5 +2,10 @@
 
 .main {
   margin: 0;
-  padding: 104px 0;
+  padding: 165px 0 64px;
+
+  @media (min-width: $viewport--xl) {
+    padding-top: 104px;
+    padding-bottom: 104px;
+  }
 }
