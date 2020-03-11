@@ -4,7 +4,15 @@
   position: relative;
   z-index: $z-index-header;
   width: 100%;
+}
 
+.root--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.root--shadow {
   &::after {
     position: absolute;
     top: 0;
@@ -20,12 +28,6 @@
       background: $gradient-header--desktop;
     }
   }
-}
-
-.root--fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 
 .container {

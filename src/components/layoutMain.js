@@ -6,11 +6,12 @@ import '../styles/index.scss';
 
 import Header from './header';
 import Footer from './footer';
+import styles from "./layoutMain.module.scss";
 
 const LayoutMain = ({ children }) => (
     <>
-        <Header description="Applications for anonymous story publishing and discussion" />
-        <main>{children}</main>
+        <Header fixed description="Applications for anonymous story publishing and discussion" />
+        <main className={styles.main}>{children}</main>
         <Footer />
     </>
 );
