@@ -7,7 +7,6 @@
   z-index: $z-index-header;
   width: 100%;
 
-
   &::after {
     position: absolute;
     top: 0;
@@ -18,16 +17,16 @@
     content: " ";
     background: $gradient-header;
 
-    @media (min-width: $viewport--xl) {
-      height: 125px;
+    @media (min-width: $viewport--lg) {
+      height: 100%;
       background: $gradient-header--desktop;
     }
   }
 }
 
 .container {
+  height: 125px;
   padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .logo {

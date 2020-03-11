@@ -13,9 +13,11 @@ const Header = ({ title, description }) => (
                 <LogoTheWordsSvg />
             </Link>
 
-            { description && <div className={styles.description}>{description}</div> }
+            {description && (
+                <div className={styles.description}>{description}</div>
+            )}
 
-            { title && <div className={styles.title}>{title}</div> }
+            {title && <div className={styles.title}>{title}</div>}
         </Container>
     </header>
 );

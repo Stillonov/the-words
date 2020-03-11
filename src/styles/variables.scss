@@ -36,7 +36,7 @@ $color-heading:                 $color-secondary;
 // Gradients
 //---------------------------------
 
-$gradient-header:               linear-gradient(180deg, rgba($color-black, 1) 55%, rgba($color-black, 0) 100%);
+$gradient-header:               linear-gradient(180deg, rgba($color-black, 1) 60%, rgba($color-black, 0) 100%);
 $gradient-header--desktop:      linear-gradient(180deg, rgba($color-black, 1) 0%, rgba($color-black, 0) 100%);
 
 // Viewports
@@ -47,11 +47,13 @@ $viewport--sm:                  375px !default;
 $viewport--md:                  768px !default;
 $viewport--lg:                  1025px !default;
 $viewport--xl:                  1280px !default;
+$viewport--xxl:                 1366px !default;
 
 $viewport--xs-max:              $viewport--sm - 0.02px !default;
 $viewport--sm-max:              $viewport--md - 0.02px !default;
 $viewport--md-max:              $viewport--lg - 0.02px !default;
 $viewport--lg-max:              $viewport--xl - 0.02px !default;
+$viewport--xl-max:              $viewport--xxl - 0.02px !default;
 
 // Typography
 //---------------------------------
