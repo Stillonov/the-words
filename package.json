@@ -37,11 +37,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "browserslist": [
-    "> 0.2%",
-    "ie 11",
+    ">0.2%",
     "not dead",
-    "not op_mini all",
-    "not iOS < 12",
-    "not Safari < 11"
+    "not op_mini all"
   ]
 }

@@ -15,9 +15,9 @@ const LayoutInfo = ({ title, children }) => (
 
         <main className={styles.main}>
             <Container>
-              <section className={cn([styles.content, 'html'])}>
-                {children}
-              </section>
+                <section className={cn([styles.content, 'html'])}>
+                    {children}
+                </section>
             </Container>
         </main>
     </>
