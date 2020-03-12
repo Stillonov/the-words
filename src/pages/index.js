@@ -2,19 +2,22 @@ import React from 'react';
 
 import LayoutMain from '../components/layoutMain';
 import SEO from '../components/seo';
-import Container from '../components/container';
-import Jingles from '../components/jingles';
-import AppLinks from '../components/appLinks';
+import Packshot from '../components/packshot';
 
 const IndexPage = () => (
     <LayoutMain>
         <SEO />
 
-        <Container>
-            <Jingles />
+        <Packshot
+            slogans={[
+                `Keep calm
+                & discuss other
+                people's stories`,
 
-            <AppLinks className="d-md-none" />
-        </Container>
+                `Keep calm
+                & fuck off!`,
+            ]}
+        />
     </LayoutMain>
 );
 
