@@ -1,23 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import cn from "classnames";
 
-import styles from './jingles.module.scss';
+import styles from "./jingles.module.scss";
 
-const Jingles = ({ className }) => (
-    <div className={cn([styles.root, className])}>
-        <div>Keep calm</div>
-        <div>& discuss other</div>
-        <div>people's stories</div>
-    </div>
-);
+const Jingles = ({ className, jingles }) => {
+    const jinglesByLine = jingles[0].split('\n');
+
+    return (
+        <div className={cn([styles.root, className])}>
+            {
+                jinglesByLine.map((line) => {
+                    return <div>{line}</div>;
+                })
+            }
+        </div>
+    );
+};
 
 Jingles.propTypes = {
     className: PropTypes.string,
+    jingles: PropTypes.array
 };
 
 Jingles.defaultProps = {
-    className: '',
+    className: "",
+    jingles: [
+        `Keep calm
+        & discuss other
+        people's stories`,
+        `Keep calm
+        & fuck off!`,
+    ]
 };
 
 export default Jingles;
