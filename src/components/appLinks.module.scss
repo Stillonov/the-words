@@ -2,9 +2,14 @@
 
 .root {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+
+    @media (min-width: $viewport--sm) {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 .link {
@@ -14,7 +19,12 @@
     transition: opacity 0.3s ease-in;
 
     & + & {
-        margin-left: 16px;
+        margin-top: 16px;
+
+        @media (min-width: $viewport--sm) {
+            margin-top: 0;
+            margin-left: 16px;
+        }
     }
 
     @media (hover: hover) and (min-width: $viewport--lg) {
