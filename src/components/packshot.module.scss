@@ -17,6 +17,11 @@
     }
 }
 
+.container {
+    position: relative;
+    z-index: 20;
+}
+
 .slogan {
     margin: 0;
     padding: 0;
@@ -44,4 +49,36 @@
 
 .app-links {
     margin-top: 48px;
+}
+
+.product {
+    @media (min-width: $viewport--md) {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 80px;
+        z-index: 10;
+        width: 717px;
+        height: 100%;
+    }
+}
+
+.product-ios {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 467px;
+    height: 1033px; // 841px;
+    background: transparent url("../images/phone-ios.png") no-repeat 0 0;
+    background-size: contain;
+}
+
+.product-android {
+    position: absolute;
+    right: 0;
+    bottom: -164px;
+    width: 329px;
+    height: 854px; // 690px;
+    background: transparent url("../images/phone-android.png") no-repeat 0 0;
+    background-size: contain;
 }

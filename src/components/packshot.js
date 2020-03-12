@@ -11,7 +11,7 @@ const Packshot = ({ className, slogans }) => {
 
     return (
         <div className={cn([styles.root, className])}>
-            <Container>
+            <Container className={styles.container}>
                 <div className={styles.slogan}>
                     {slogansByLine.map(line => {
                         return <div>{line}</div>;
@@ -20,6 +20,11 @@ const Packshot = ({ className, slogans }) => {
 
                 <AppLinks className={cn([styles.appLinks, 'd-md-none'])} />
             </Container>
+
+            <div className={styles.product}>
+                <div className={styles.productAndroid} />
+                <div className={styles.productIos} />
+            </div>
         </div>
     );
 };
