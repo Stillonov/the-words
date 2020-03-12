@@ -1,38 +1,38 @@
 @import "src/styles/variables";
 
 .root {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .link {
-  display: block;
-  opacity: 1;
-  flex: 0 1 auto;
-  transition: opacity 0.3s ease-in;
+    display: block;
+    opacity: 1;
+    flex: 0 1 auto;
+    transition: opacity 0.3s ease-in;
 
-  & + & {
-    margin-left: 16px;
-  }
-
-  @media (hover: hover) and (min-width: $viewport--lg) {
-    &:hover {
-      opacity: 0.8;
+    & + & {
+        margin-left: 16px;
     }
-  }
+
+    @media (hover: hover) and (min-width: $viewport--lg) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .badge-app-store,
 .badge-google-plus {
-  height: 40px;
+    height: 40px;
 }
 
 .badge-app-store {
-  width: 120px;
+    width: 120px;
 }
 
 .badge-google-plus {
-  width: 135px;
+    width: 135px;
 }

@@ -3,22 +3,22 @@
 //---------------------------------
 
 .html {
-  p {
-    margin: 0 0 19px;
-    padding: 0;
-  }
-
-  ul,
-  ol {
-    margin: 0 0 19px 40px;
-    padding: 0;
-  }
-
-  a {
-    color: $color-link;
-
-    &:hover {
-      text-decoration: none;
+    p {
+        margin: 0 0 19px;
+        padding: 0;
     }
-  }
+
+    ul,
+    ol {
+        margin: 0 0 19px 40px;
+        padding: 0;
+    }
+
+    a {
+        color: $color-link;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

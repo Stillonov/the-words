@@ -1,103 +1,103 @@
 @import "src/styles/variables";
 
 .root {
-  @media (min-width: $viewport--md) {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+    @media (min-width: $viewport--md) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: 32px;
-  padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-  @media (min-width: $viewport--sm) {
-    flex-direction: row;
-    align-items: center;
-  }
+    @media (min-width: $viewport--sm) {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 .nav {
-  flex: 1 1 auto;
-  order: 2;
+    flex: 1 1 auto;
+    order: 2;
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 }
 
 .nav-item {
-  flex: 0 1 auto;
-  margin-left: 16px;
-
-  @media (min-width: $viewport--sm) {
-    margin-left: 24px;
-  }
-
-  @media (min-width: $viewport--md) {
-    margin-left: 32px;
-  }
-
-  &:first-child {
-    margin-left: 0;
+    flex: 0 1 auto;
+    margin-left: 16px;
 
     @media (min-width: $viewport--sm) {
-      margin-left: 24px;
+        margin-left: 24px;
     }
 
     @media (min-width: $viewport--md) {
-      margin-left: 32px;
+        margin-left: 32px;
     }
-  }
+
+    &:first-child {
+        margin-left: 0;
+
+        @media (min-width: $viewport--sm) {
+            margin-left: 24px;
+        }
+
+        @media (min-width: $viewport--md) {
+            margin-left: 32px;
+        }
+    }
 }
 
 .nav-link {
-  opacity: 1;
-  color: $color-primary;
-  font-size: 14px;
-  line-height: 19px;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: opacity 0.3s ease-in;
+    opacity: 1;
+    color: $color-primary;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in;
 
-  @media (hover: hover) and (min-width: $viewport--md) {
-    &:hover {
-      opacity: 0.8;
+    @media (hover: hover) and (min-width: $viewport--md) {
+        &:hover {
+            opacity: 0.8;
+        }
     }
-  }
 }
 
 .logo {
-  opacity: 1;
-  flex: 0 1 auto;
-  order: 1;
-  margin: 0 0 10px;
-  transition: opacity 0.3s ease-in;
+    opacity: 1;
+    flex: 0 1 auto;
+    order: 1;
+    margin: 0 0 10px;
+    transition: opacity 0.3s ease-in;
 
-  @media (min-width: $viewport--sm) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $viewport--md) {
-    order: 3;
-  }
-
-  @media (hover: hover) and (min-width: $viewport--md) {
-    &:hover {
-      opacity: 0.8;
+    @media (min-width: $viewport--sm) {
+        margin-bottom: 0;
     }
-  }
+
+    @media (min-width: $viewport--md) {
+        order: 3;
+    }
+
+    @media (hover: hover) and (min-width: $viewport--md) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }

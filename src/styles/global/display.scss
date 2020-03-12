@@ -1,180 +1,180 @@
 // Like Bootstrap 4 (https://getbootstrap.com/docs/4.4/utilities/display)
 
 .d {
-  // All viewports
-  &-none {
-    display: none !important;
-  }
-
-  &-inline {
-    display: inline !important;
-  }
-
-  &-inline-block {
-    display: inline-block !important;
-  }
-
-  &-block {
-    display: block !important;
-  }
-
-  &-flex {
-    display: flex !important;
-  }
-
-  &-inline-flex {
-    display: inline-flex !important;
-  }
-
-  // Small viewport
-
-  &-sm-none {
-    @media (min-width: $viewport--sm) {
-      display: none !important;
+    // All viewports
+    &-none {
+        display: none !important;
     }
-  }
 
-  &-sm-inline {
-    @media (min-width: $viewport--sm) {
-      display: inline !important;
+    &-inline {
+        display: inline !important;
     }
-  }
 
-  &-sm-inline-block {
-    @media (min-width: $viewport--sm) {
-      display: inline-block !important;
+    &-inline-block {
+        display: inline-block !important;
     }
-  }
 
-  &-sm-block {
-    @media (min-width: $viewport--sm) {
-      display: block !important;
+    &-block {
+        display: block !important;
     }
-  }
 
-  &-sm-flex {
-    @media (min-width: $viewport--sm) {
-      display: flex !important;
+    &-flex {
+        display: flex !important;
     }
-  }
 
-  &-sm-inline-flex {
-    @media (min-width: $viewport--sm) {
-      display: inline-flex !important;
+    &-inline-flex {
+        display: inline-flex !important;
     }
-  }
 
-  // Middle viewport
+    // Small viewport
 
-  &-md-none {
-    @media (min-width: $viewport--md) {
-      display: none !important;
+    &-sm-none {
+        @media (min-width: $viewport--sm) {
+            display: none !important;
+        }
     }
-  }
 
-  &-md-inline {
-    @media (min-width: $viewport--md) {
-      display: inline !important;
+    &-sm-inline {
+        @media (min-width: $viewport--sm) {
+            display: inline !important;
+        }
     }
-  }
 
-  &-md-inline-block {
-    @media (min-width: $viewport--md) {
-      display: inline-block !important;
+    &-sm-inline-block {
+        @media (min-width: $viewport--sm) {
+            display: inline-block !important;
+        }
     }
-  }
 
-  &-md-block {
-    @media (min-width: $viewport--md) {
-      display: block !important;
+    &-sm-block {
+        @media (min-width: $viewport--sm) {
+            display: block !important;
+        }
     }
-  }
 
-  &-md-flex {
-    @media (min-width: $viewport--md) {
-      display: flex !important;
+    &-sm-flex {
+        @media (min-width: $viewport--sm) {
+            display: flex !important;
+        }
     }
-  }
 
-  &-md-inline-flex {
-    @media (min-width: $viewport--md) {
-      display: inline-flex !important;
+    &-sm-inline-flex {
+        @media (min-width: $viewport--sm) {
+            display: inline-flex !important;
+        }
     }
-  }
 
-  // Large viewport
+    // Middle viewport
 
-  &-lg-none {
-    @media (min-width: $viewport--lg) {
-      display: none !important;
+    &-md-none {
+        @media (min-width: $viewport--md) {
+            display: none !important;
+        }
     }
-  }
 
-  &-lg-inline {
-    @media (min-width: $viewport--lg) {
-      display: inline !important;
+    &-md-inline {
+        @media (min-width: $viewport--md) {
+            display: inline !important;
+        }
     }
-  }
 
-  &-lg-inline-block {
-    @media (min-width: $viewport--lg) {
-      display: inline-block !important;
+    &-md-inline-block {
+        @media (min-width: $viewport--md) {
+            display: inline-block !important;
+        }
     }
-  }
 
-  &-lg-block {
-    @media (min-width: $viewport--lg) {
-      display: block !important;
+    &-md-block {
+        @media (min-width: $viewport--md) {
+            display: block !important;
+        }
     }
-  }
 
-  &-lg-flex {
-    @media (min-width: $viewport--lg) {
-      display: flex !important;
+    &-md-flex {
+        @media (min-width: $viewport--md) {
+            display: flex !important;
+        }
     }
-  }
 
-  &-lg-inline-flex {
-    @media (min-width: $viewport--lg) {
-      display: inline-flex !important;
+    &-md-inline-flex {
+        @media (min-width: $viewport--md) {
+            display: inline-flex !important;
+        }
     }
-  }
 
-  // Extra-large viewport
+    // Large viewport
 
-  &-xl-none {
-    @media (min-width: $viewport--xl) {
-      display: none !important;
+    &-lg-none {
+        @media (min-width: $viewport--lg) {
+            display: none !important;
+        }
     }
-  }
 
-  &-xl-inline {
-    @media (min-width: $viewport--xl) {
-      display: inline !important;
+    &-lg-inline {
+        @media (min-width: $viewport--lg) {
+            display: inline !important;
+        }
     }
-  }
 
-  &-xl-inline-block {
-    @media (min-width: $viewport--xl) {
-      display: inline-block !important;
+    &-lg-inline-block {
+        @media (min-width: $viewport--lg) {
+            display: inline-block !important;
+        }
     }
-  }
 
-  &-xl-block {
-    @media (min-width: $viewport--xl) {
-      display: block !important;
+    &-lg-block {
+        @media (min-width: $viewport--lg) {
+            display: block !important;
+        }
     }
-  }
 
-  &-xl-flex {
-    @media (min-width: $viewport--xl) {
-      display: flex !important;
+    &-lg-flex {
+        @media (min-width: $viewport--lg) {
+            display: flex !important;
+        }
     }
-  }
 
-  &-xl-inline-flex {
-    @media (min-width: $viewport--xl) {
-      display: inline-flex !important;
+    &-lg-inline-flex {
+        @media (min-width: $viewport--lg) {
+            display: inline-flex !important;
+        }
     }
-  }
+
+    // Extra-large viewport
+
+    &-xl-none {
+        @media (min-width: $viewport--xl) {
+            display: none !important;
+        }
+    }
+
+    &-xl-inline {
+        @media (min-width: $viewport--xl) {
+            display: inline !important;
+        }
+    }
+
+    &-xl-inline-block {
+        @media (min-width: $viewport--xl) {
+            display: inline-block !important;
+        }
+    }
+
+    &-xl-block {
+        @media (min-width: $viewport--xl) {
+            display: block !important;
+        }
+    }
+
+    &-xl-flex {
+        @media (min-width: $viewport--xl) {
+            display: flex !important;
+        }
+    }
+
+    &-xl-inline-flex {
+        @media (min-width: $viewport--xl) {
+            display: inline-flex !important;
+        }
+    }
 }

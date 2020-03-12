@@ -3,7 +3,7 @@ import React from 'react';
 import LayoutMain from '../components/layoutMain';
 import SEO from '../components/seo';
 import Container from '../components/container';
-import Jingles from "../components/jingles";
+import Jingles from '../components/jingles';
 import AppLinks from '../components/appLinks';
 
 const IndexPage = () => (

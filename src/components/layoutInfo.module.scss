@@ -1,26 +1,26 @@
 @import "src/styles/variables";
 
 .main {
-  margin: 0;
-  padding: 165px 0 32px;
+    margin: 0;
+    padding: 165px 0 32px;
 
-  @media (min-width: $viewport--lg) {
-    padding-top: 104px;
-    padding-bottom: 64px;
-  }
+    @media (min-width: $viewport--lg) {
+        padding-top: 104px;
+        padding-bottom: 64px;
+    }
 }
 
 .content {
-  max-width: 928px;
-  margin: 0;
+    max-width: 928px;
+    margin: 0;
 
-  @media (min-width: $viewport--lg) {
-    margin-right: 0;
-    margin-left: 170px;
-  }
+    @media (min-width: $viewport--lg) {
+        margin-right: 0;
+        margin-left: 170px;
+    }
 
-  @media (min-width: $viewport--xxl) {
-    margin-right: auto;
-    margin-left: auto;
-  }
+    @media (min-width: $viewport--xxl) {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
