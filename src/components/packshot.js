@@ -7,14 +7,14 @@ import Container from '../components/container';
 import styles from './packshot.module.scss';
 
 const Packshot = ({ className, slogans }) => {
-    const slogansByLine = slogans[0].split('\n');
+    const sloganByLine = slogans[0].split('\n');
 
     return (
         <div className={cn([styles.root, className])}>
             <Container className={styles.container}>
                 <div className={styles.slogan}>
-                    {slogansByLine.map(line => {
-                        return <div>{line}</div>;
+                    {sloganByLine.map(line => {
+                        return <div key={line}>{line}</div>;
                     })}
                 </div>
 

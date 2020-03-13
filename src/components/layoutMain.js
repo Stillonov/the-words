@@ -9,6 +9,7 @@ const LayoutMain = ({ children }) => (
     <>
         <Header
             fixed
+            shadow
             description="Applications for anonymous story publishing and discussion"
         />
         <main className={styles.main}>{children}</main>

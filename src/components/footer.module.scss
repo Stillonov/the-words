@@ -1,11 +1,20 @@
 @import "src/styles/variables";
 
 .root {
+    position: relative;
+    z-index: $z-index-footer;
+    margin-top: -116px;
+
+    @media (min-width: $viewport--sm) {
+        margin-top: -87px;
+    }
+
     @media (min-width: $viewport--md) {
         position: absolute;
         right: 0;
         bottom: 0;
         left: 0;
+        margin-top: 0;
     }
 }
 
