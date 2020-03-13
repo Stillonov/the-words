@@ -8,15 +8,14 @@ import styles from './header.module.scss';
 import LogoTheWordsSvg from '../images/logo-the-words.inline.svg';
 
 const Header = props => {
-    const { fixed, shadow, title, description } = props;
+    const { info, title, description } = props;
 
     return (
         <header
             className={cn([
                 styles.root,
                 {
-                    [styles.rootFixed]: fixed,
-                    [styles.rootShadow]: shadow,
+                    [styles.rootInfo]: info,
                 },
             ])}
         >
@@ -36,15 +35,13 @@ const Header = props => {
 };
 
 Header.propTypes = {
-    fixed: PropTypes.bool,
-    shadow: PropTypes.bool,
+    info: PropTypes.bool,
     title: PropTypes.string,
     description: PropTypes.string,
 };
 
 Header.defaultProps = {
-    fixed: false,
-    shadow: false,
+    info: false,
     title: '',
     description: '',
 };

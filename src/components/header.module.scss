@@ -1,26 +1,33 @@
 @import "src/styles/variables";
 
 .root {
-    position: relative;
-    z-index: $z-index-header;
-    width: 100%;
-}
-
-.root--fixed {
     position: fixed;
     top: 0;
     left: 0;
-}
+    z-index: $z-index-header;
+    width: 100%;
 
-.root--shadow {
     &::after {
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
         width: 100%;
-        height: 200px; // In design: 240px;
+        height: 200px;
         content: " ";
+        background: $gradient-header;
+
+        @media (min-width: $viewport--md) {
+            height: 100%;
+            background: $gradient-header--desktop;
+        }
+    }
+}
+
+.root--info {
+    &::after {
+        width: 100%;
+        height: 200px;
         background: $gradient-header;
 
         @media (min-width: $viewport--lg) {

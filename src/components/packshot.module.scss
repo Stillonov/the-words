@@ -36,6 +36,7 @@
     font-weight: 900;
     white-space: nowrap;
     text-transform: uppercase;
+    text-shadow: 0 0 30px rgba($color-black, 0.6);
 
     @media (min-width: $viewport--md) {
         line-height: 0.9;
@@ -57,9 +58,10 @@
 }
 
 .product {
+    overflow: hidden;
+    position: relative;
     width: 100%;
     height: 408px;
-    background: red;
 
     @media (min-width: $viewport--md) {
         overflow: hidden;
@@ -73,25 +75,40 @@
 }
 
 .product-ios {
-    display: none;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    width: 467px;
-    height: 1033px; // 841px;
+    width: calc((231 / 375) * 100%);
+    height: 0;
+    padding: calc((1033 / 717) * 100%) 0 0;
     background: transparent url("../images/phone-ios.png") no-repeat 0 0;
     background-size: contain;
-    transform: translate(0, -70%);
+
+    @media (min-width: $viewport--md) {
+        top: 50%;
+        left: 0;
+        width: calc((467 / 717) * 100%);
+        padding: calc((1033 / 717) * 100%) 0 0;
+        transform: translate(0, -62.1%);
+    }
 }
 
 .product-android {
-    display: none;
     position: absolute;
-    right: 0;
-    bottom: 50%;
-    width: 329px;
-    height: 854px; // 690px;
+    top: calc((200 / 408) * 100%);
+    right: calc((20 / 375) * 100%);
+    width: calc((162 / 375) * 100%);
+    height: 0;
+    padding: calc((854 / 717) * 100%) 0 0;
     background: transparent url("../images/phone-android.png") no-repeat 0 0;
     background-size: contain;
-    transform: translate(0, 70%);
+
+    @media (min-width: $viewport--md) {
+        top: auto;
+        right: 0;
+        bottom: 50%;
+        width: calc((329 / 717) * 100%);
+        padding-top: calc((854 / 717) * 100%);
+        transform: translate(0, 72%);
+    }
 }

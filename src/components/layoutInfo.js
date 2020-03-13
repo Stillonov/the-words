@@ -8,7 +8,7 @@ import styles from './layoutInfo.module.scss';
 
 const LayoutInfo = ({ title, children }) => (
     <>
-        <Header fixed shadow title={title} />
+        <Header info title={title} />
 
         <main className={styles.main}>
             <Container>
