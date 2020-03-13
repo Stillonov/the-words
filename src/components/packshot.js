@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
@@ -7,6 +7,14 @@ import Container from '../components/container';
 import styles from './packshot.module.scss';
 
 const Packshot = ({ className, slogans }) => {
+    const [init, setInit] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setInit(false);
+        }, 1000);
+    });
+
     const sloganByLine = slogans[0].split('\n');
 
     return (
@@ -22,7 +30,12 @@ const Packshot = ({ className, slogans }) => {
             </Container>
 
             <div className={styles.product}>
-                <div className={styles.productAndroid} />
+                <div className={cn([
+                    styles.productAndroid,
+                    {
+                        [styles.productAndroidHidden]: init
+                    }
+                ])} />
                 <div className={styles.productIos} />
             </div>
         </div>

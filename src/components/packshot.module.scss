@@ -94,6 +94,7 @@
 }
 
 .product-android {
+    opacity: 1;
     position: absolute;
     top: calc((200 / 408) * 100%);
     right: calc((20 / 375) * 100%);
@@ -102,6 +103,7 @@
     padding: calc((854 / 717) * 100%) 0 0;
     background: transparent url("../images/phone-android.png") no-repeat 0 0;
     background-size: contain;
+    transition: all 1s ease-in-out;
 
     @media (min-width: $viewport--md) {
         top: auto;
@@ -110,5 +112,14 @@
         width: calc((329 / 717) * 100%);
         padding-top: calc((854 / 717) * 100%);
         transform: translate(0, 72%);
+    }
+}
+
+.product-android--hidden {
+    opacity: 0;
+    transform: translate(0, 50%);
+
+    @media (min-width: $viewport--md) {
+        transform: translate(0, 122%);
     }
 }
