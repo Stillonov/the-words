@@ -1,15 +1,9 @@
 import React from 'react';
 
 import LayoutInfo from '../components/layoutInfo';
-import SEO from '../components/seo';
 
-const PrivacyPage = () => {
-    const pageTitle = 'Privacy Policy';
-
-    return (
-        <LayoutInfo title={pageTitle}>
-            <SEO title={pageTitle} />
-
+const PrivacyPage = () => (
+        <LayoutInfo title="Privacy Policy">
             <p>
                 We believe that you should always know what kind of data we
                 collect from you, how we collect it, and how you can have
@@ -278,7 +272,7 @@ const PrivacyPage = () => {
                 accurate or complete
             </p>
         </LayoutInfo>
-    );
-};
+);
+
 
 export default PrivacyPage;
