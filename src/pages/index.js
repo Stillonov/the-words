@@ -4,7 +4,14 @@ import LayoutMain from '../components/layoutMain';
 import Packshot from '../components/packshot';
 
 const IndexPage = () => (
-    <LayoutMain>
+    <LayoutMain
+        description="Applications for anonymous story publishing and discussion"
+        appLinks={{
+            appStore: 'https://apple.com',
+            googlePlay: 'https://google.com',
+        }}
+        footerLogoLink="https://yandex.ru"
+    >
         <Packshot
             sloganDuration={6000}
             slogans={[

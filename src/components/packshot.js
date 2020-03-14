@@ -4,15 +4,20 @@ import cn from 'classnames';
 
 import AppLinks from './appLinks';
 import Container from '../components/container';
+import shuffleArray from '../utils/shuffleArray';
 import styles from './packshot.module.scss';
 
 const Packshot = ({ sloganDuration, slogans }) => {
+    const [shuffledSlogans] = useState(() => {
+        return shuffleArray(slogans);
+    });
     const [init, setInit] = useState(true);
+    const currentSlogan = useRef(0);
+    const sloganByLine = shuffledSlogans[currentSlogan.current].split('\n');
     const [sloganState, setSloganState] = useState(null);
     const prevSloganState = useRef(null);
-    const currentSlogan = useRef(0);
-    const sloganByLine = slogans[currentSlogan.current].split('\n');
 
+    // Init
     useEffect(() => {
         const delay = setTimeout(() => {
             setInit(false); // On init
@@ -23,6 +28,7 @@ const Packshot = ({ sloganDuration, slogans }) => {
         };
     }, []);
 
+    // If init finished
     useEffect(() => {
         if (init) {
             return;
@@ -37,16 +43,11 @@ const Packshot = ({ sloganDuration, slogans }) => {
         };
     }, [init, sloganDuration]);
 
+    // Slogans changing
     useEffect(() => {
         if (prevSloganState.current === sloganState) {
             return;
         }
-
-        console.log('----------------------');
-        console.log('Change slogan');
-        console.log('currentSlogan.current', currentSlogan.current);
-        console.log('prevSloganState.current', prevSloganState.current);
-        console.log('sloganState', sloganState);
 
         let nextState;
         let lifetime;
@@ -67,7 +68,7 @@ const Packshot = ({ sloganDuration, slogans }) => {
         const delay = setTimeout(() => {
             if (sloganState === 'Out') {
                 currentSlogan.current =
-                    currentSlogan.current >= slogans.length - 1
+                    currentSlogan.current >= shuffledSlogans.length - 1
                         ? 0
                         : currentSlogan.current + 1;
             }
@@ -78,7 +79,7 @@ const Packshot = ({ sloganDuration, slogans }) => {
         return () => {
             clearTimeout(delay);
         };
-    }, [sloganState, sloganDuration, currentSlogan, slogans]);
+    }, [sloganState, sloganDuration, currentSlogan, shuffledSlogans.length]);
 
     return (
         <div className={styles.root}>

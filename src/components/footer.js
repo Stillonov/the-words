@@ -5,11 +5,12 @@ import Container from './container';
 import AppLinks from './appLinks';
 import styles from './footer.module.scss';
 import LogoUnionSvg from '../images/logo-union.inline.svg';
+import PropTypes from 'prop-types';
 
-const Footer = () => (
+const Footer = ({ appLinks, footerLogoLink }) => (
     <footer className={styles.root}>
         <Container className={styles.container}>
-            <AppLinks className="d-none d-md-flex" />
+            <AppLinks appLinks={appLinks} className="d-none d-md-flex" />
 
             <nav className={styles.nav}>
                 <ul>
@@ -26,11 +27,29 @@ const Footer = () => (
                 </ul>
             </nav>
 
-            <a className={styles.logo} href="/">
-                <LogoUnionSvg />
-            </a>
+            {footerLogoLink && (
+                <a className={styles.logo} href={footerLogoLink}>
+                    <LogoUnionSvg />
+                </a>
+            )}
         </Container>
     </footer>
 );
+
+Footer.propTypes = {
+    appLinks: PropTypes.shape({
+        appStore: PropTypes.string,
+        googlePlay: PropTypes.string,
+    }),
+    footerLogoLink: PropTypes.string,
+};
+
+Footer.defaultProps = {
+    appLinks: {
+        appStore: '',
+        googlePlay: '',
+    },
+    footerLogoLink: '',
+};
 
 export default Footer;
