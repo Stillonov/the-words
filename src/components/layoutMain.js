@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Seo from './seo';
 import Header from './header';
 import Footer from './footer';
-import Seo from './seo';
 import styles from './layoutMain.module.scss';
 
 const LayoutMain = ({ children }) => (
