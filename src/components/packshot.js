@@ -36,7 +36,12 @@ const Packshot = ({ className, slogans }) => {
                         [styles.productAndroidHidden]: init
                     }
                 ])} />
-                <div className={styles.productIos} />
+                <div className={cn([
+                    styles.productIos,
+                    {
+                        [styles.productIosHidden]: init
+                    }
+                ])} />
             </div>
         </div>
     );
