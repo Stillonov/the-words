@@ -85,7 +85,7 @@
     background: transparent url("../images/phone-ios.png") no-repeat 0 0;
     background-size: contain;
     transform: translate3d(0, 0, 0);
-    transition: opacity 1.3s cubic-bezier(.31,.6,.54,.98),
+    transition: opacity 0.9s cubic-bezier(.31,.6,.54,.98),
     top 1.7s cubic-bezier(.31,.6,.54,.98);
 
     @media (min-width: $viewport--md) {
@@ -102,7 +102,11 @@
     top: 40%;
 
     @media (min-width: $viewport--md) {
-        top: 70%;
+        top: 55%;
+    }
+
+    @media (min-width: $viewport--lg) {
+        top: 65%;
     }
 }
 
@@ -116,7 +120,7 @@
     padding: calc((854 / 717) * 100%) 0 0;
     background: transparent url("../images/phone-android.png") no-repeat 0 0;
     background-size: contain;
-    transition: opacity 1.3s cubic-bezier(.31,.6,.54,.98),
+    transition: opacity 1.5s cubic-bezier(.31,.6,.54,.98),
     top 1.7s cubic-bezier(.31,.6,.54,.98),
     bottom 1.7s cubic-bezier(.31,.6,.54,.98);
 
@@ -135,6 +139,10 @@
     top: calc((500 / 408) * 100%);
 
     @media (min-width: $viewport--md) {
+        bottom: 40%;
+    }
+
+    @media (min-width: $viewport--lg) {
         bottom: 20%;
     }
 }
