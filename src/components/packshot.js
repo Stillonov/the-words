@@ -1,41 +1,98 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import cn from "classnames";
 
-import AppLinks from './appLinks';
-import Container from '../components/container';
-import styles from './packshot.module.scss';
+import AppLinks from "./appLinks";
+import Container from "../components/container";
+import styles from "./packshot.module.scss";
 
 const Packshot = ({ className, slogans }) => {
     const [init, setInit] = useState(true);
+    const [currentSlogan, setCurrentSlogan] = useState(0);
+    const [sloganState, setSloganState] = useState(null);
+    const sloganByLine = slogans[currentSlogan].split("\n");
 
     useEffect(() => {
         const delay = setTimeout(() => {
+            console.log('Init end');
             setInit(false);
-        }, 2000);
+        }, 3000);
 
         return () => {
             clearTimeout(delay);
-        }
+        };
     }, []);
 
-    const sloganByLine = slogans[0].split('\n');
+    useEffect(() => {
+        if (init) {
+            return;
+        }
+
+        const delay = setTimeout(() => {
+            console.log('Slogan Out');
+            setSloganState('Out');
+        }, 6000);
+
+        return () => {
+            clearTimeout(delay);
+        };
+    }, [init]);
+
+    useEffect(() => {
+        if (init || !sloganState) {
+            return;
+        }
+
+        const nextSlogan = (currentSlogan >= slogans.length - 1) ? 0 : currentSlogan + 1;
+        let nextState;
+        let lifetime;
+
+        if (sloganState === 'In') {
+            nextState = 'Active';
+            lifetime = 200;
+            setCurrentSlogan(nextSlogan);
+        } else if (sloganState === 'Active') {
+            nextState = 'Out';
+            lifetime = 6000;
+        } else {
+            nextState = 'In';
+            lifetime = 800;
+        }
+
+        const delay = setTimeout(() => {
+            console.log('State', nextState);
+            setSloganState(nextState);
+        }, lifetime);
+
+        return () => {
+            clearTimeout(delay);
+        };
+    }, [sloganState]);
 
     return (
         <div className={cn([styles.root, className])}>
             <Container className={styles.container}>
-                <div className={styles.slogan}>
+                <div className={cn([
+                    styles.slogan,
+                    {
+                        [styles.sloganIn]: init,
+                        [styles[`slogan${sloganState}`]] : sloganState,
+                    },
+                ])}>
                     {sloganByLine.map(line => {
                         return <div key={line}>{line}</div>;
                     })}
                 </div>
 
-                <AppLinks className={cn([styles.appLinks, 'd-md-none'])} />
+                <AppLinks className={cn([styles.appLinks, "d-md-none"])}/>
             </Container>
 
-            <div className={cn([styles.product, { [styles.productHidden]: init }])}>
-                <div className={styles.productAndroid} />
-                <div className={styles.productIos} />
+            <div className={cn([
+                styles.product,
+                { [styles.productHidden]: init }
+            ])}>
+                <div className={styles.productAndroid}/>
+                <div className={styles.productIos}/>
             </div>
         </div>
     );
@@ -43,12 +100,11 @@ const Packshot = ({ className, slogans }) => {
 
 Packshot.propTypes = {
     className: PropTypes.string,
-    slogans: PropTypes.array,
+    slogans: PropTypes.array.isRequired,
 };
 
 Packshot.defaultProps = {
-    className: '',
-    slogans: [],
+    className: "",
 };
 
 export default Packshot;

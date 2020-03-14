@@ -11,11 +11,16 @@ const IndexPage = () => (
         <Packshot
             slogans={[
                 `Keep calm
+                you are
+                anonymous`,
+
+                `Keep calm
                 & discuss other
                 people's stories`,
 
                 `Keep calm
-                & fuck off!`,
+                & Write your
+                own story`,
             ]}
         />
     </LayoutMain>
