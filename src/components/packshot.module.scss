@@ -38,6 +38,7 @@
     text-transform: uppercase;
     text-shadow: 0 0 30px rgba($color-black, 0.6);
     will-change: opacity;
+    transition: opacity 0.8s ease-in;
 
     @media (min-width: $viewport--md) {
         line-height: 0.9;
@@ -51,6 +52,7 @@
         will-change: transform;
         transform: translateY(0);
         backface-visibility: hidden;
+        transition: transform 1.5s $ease-ou-cubic;
 
         &:nth-child(1) {
             color: $color-secondary;
@@ -60,11 +62,8 @@
 
 .slogan--in {
     opacity: 0;
-    transition: opacity 0.8s ease-in;
 
     div {
-        transition: all 1.5s $ease-ou-cubic;
-
         &:nth-child(1) {
             transform: translateY(50%);
         }
@@ -89,21 +88,17 @@
 
 .slogan--active {
     opacity: 1;
-    transition: opacity 0.8s ease-in;
 
     div {
         transform: translateY(0);
-        transition: all 1.5s $ease-ou-cubic;
     }
 }
 
 .slogan--out {
     opacity: 0;
-    transition: opacity 0.8s ease-in;
 
     div {
         transform: translateY(0);
-        transition: all 1.5s $ease-ou-cubic;
     }
 }
 

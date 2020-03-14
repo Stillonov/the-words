@@ -6,6 +6,7 @@ import Packshot from '../components/packshot';
 const IndexPage = () => (
     <LayoutMain>
         <Packshot
+            sloganDuration={6000}
             slogans={[
                 `Keep calm
                 you are

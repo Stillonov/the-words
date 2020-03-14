@@ -9,9 +9,7 @@ import styles from './layoutMain.module.scss';
 const LayoutMain = ({ children }) => (
     <>
         <Seo />
-        <Header
-            description="Applications for anonymous story publishing and discussion"
-        />
+        <Header description="Applications for anonymous story publishing and discussion" />
         <main className={styles.main}>{children}</main>
         <Footer />
     </>
