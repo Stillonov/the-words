@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-import Header from './header';
 import Seo from './seo';
+import Header from './header';
 import Container from '../components/container';
 import styles from './layoutInfo.module.scss';
 
