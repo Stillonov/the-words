@@ -5,7 +5,8 @@ import Packshot from '../components/packshot';
 
 const IndexPage = () => {
     const pageConfig = {
-        description: 'Applications for anonymous story publishing and discussion',
+        description:
+            'Applications for anonymous story publishing and discussion',
         appLinks: {
             appStore: 'https://apple.com',
             googlePlay: 'https://google.com',

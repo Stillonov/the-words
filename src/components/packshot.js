@@ -98,7 +98,14 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
                     })}
                 </div>
 
-                <AppLinks className={cn([styles.appLinks, 'd-md-none'])} appLinks={appLinks} />
+                <AppLinks
+                    className={cn([
+                        styles.appLinks,
+                        { [styles.appLinksHidden]: init },
+                        'd-md-none',
+                    ])}
+                    appLinks={appLinks}
+                />
             </Container>
 
             <div
