@@ -58,7 +58,6 @@ const Packshot = ({ slogans }) => {
         }
 
         const delay = setTimeout(() => {
-            console.log('State', nextState);
             setSloganState(nextState);
         }, lifetime);
 
