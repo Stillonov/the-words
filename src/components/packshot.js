@@ -28,7 +28,7 @@ const Packshot = ({ slogans }) => {
         }
 
         const delay = setTimeout(() => {
-            setSloganState('Out'); // Runing a change of slogans
+            setSloganState('Out'); // Start slogans changing 
         }, 6000);
 
         return () => {
