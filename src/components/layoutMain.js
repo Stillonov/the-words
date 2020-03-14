@@ -17,21 +17,11 @@ const LayoutMain = ({ description, appLinks, footerLogoLink, children }) => (
 
 LayoutMain.propTypes = {
     description: PropTypes.string,
-    appLinks: PropTypes.shape({
-        appStore: PropTypes.string,
-        googlePlay: PropTypes.string,
-    }),
-    footerLogoLink: PropTypes.string,
     children: PropTypes.node.isRequired,
 };
 
 LayoutMain.defaultProps = {
     description: 'Applications for anonymous story publishing and discussion',
-    appLinks: {
-        appStore: '',
-        googlePlay: '',
-    },
-    footerLogoLink: '',
 };
 
 export default LayoutMain;

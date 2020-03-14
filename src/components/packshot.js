@@ -7,7 +7,7 @@ import Container from '../components/container';
 import shuffleArray from '../utils/shuffleArray';
 import styles from './packshot.module.scss';
 
-const Packshot = ({ sloganDuration, slogans }) => {
+const Packshot = ({ sloganDuration, slogans, appLinks }) => {
     const [shuffledSlogans] = useState(() => {
         return shuffleArray(slogans);
     });
@@ -98,7 +98,7 @@ const Packshot = ({ sloganDuration, slogans }) => {
                     })}
                 </div>
 
-                <AppLinks className={cn([styles.appLinks, 'd-md-none'])} />
+                <AppLinks className={cn([styles.appLinks, 'd-md-none'])} appLinks={appLinks} />
             </Container>
 
             <div

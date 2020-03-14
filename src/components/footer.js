@@ -37,18 +37,10 @@ const Footer = ({ appLinks, footerLogoLink }) => (
 );
 
 Footer.propTypes = {
-    appLinks: PropTypes.shape({
-        appStore: PropTypes.string,
-        googlePlay: PropTypes.string,
-    }),
     footerLogoLink: PropTypes.string,
 };
 
 Footer.defaultProps = {
-    appLinks: {
-        appStore: '',
-        googlePlay: '',
-    },
     footerLogoLink: '',
 };
 
