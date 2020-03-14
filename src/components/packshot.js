@@ -6,7 +6,7 @@ import AppLinks from "./appLinks";
 import Container from "../components/container";
 import styles from "./packshot.module.scss";
 
-const Packshot = ({ className, slogans }) => {
+const Packshot = ({ slogans }) => {
     const [init, setInit] = useState(true);
     const [currentSlogan, setCurrentSlogan] = useState(0);
     const [sloganState, setSloganState] = useState(null);
@@ -99,12 +99,7 @@ const Packshot = ({ className, slogans }) => {
 };
 
 Packshot.propTypes = {
-    className: PropTypes.string,
     slogans: PropTypes.array.isRequired,
-};
-
-Packshot.defaultProps = {
-    className: "",
 };
 
 export default Packshot;
