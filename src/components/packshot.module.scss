@@ -41,7 +41,12 @@
     transition: opacity 0.8s ease-in;
 
     @media (min-width: $viewport--md) {
+        font-size: 6vw;
         line-height: 0.9;
+    }
+
+    @media (min-width: $viewport--lg) {
+        font-size: 8vw;
     }
 
     @media (min-width: $viewport--xl) {
