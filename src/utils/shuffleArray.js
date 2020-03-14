@@ -1,10 +1,10 @@
 /**
- * Shuffle Array (Fisher–Yates shuffle)
+ * Shuffle array (Fisher–Yates shuffle)
  * @param {array} array
  * @returns {array} shuffledArray
  */
 
-function shuffleArray(array) {
+const shuffleArray = array => {
     const shuffledArray = [...array];
 
     for (let i = array.length - 1; i > 0; i--) {
@@ -17,6 +17,6 @@ function shuffleArray(array) {
     }
 
     return shuffledArray;
-}
+};
 
 export default shuffleArray;

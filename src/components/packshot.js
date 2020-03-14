@@ -5,7 +5,10 @@ import cn from 'classnames';
 import AppLinks from './appLinks';
 import Container from '../components/container';
 import shuffleArray from '../utils/shuffleArray';
+import loadImage from '../utils/loadImage';
 import styles from './packshot.module.scss';
+import phoneIosImage from '../images/phone-ios.png';
+import phoneAndroidImage from '../images/phone-android.png';
 
 const Packshot = ({ sloganDuration, slogans, appLinks }) => {
     const [shuffledSlogans] = useState(() => {
@@ -19,12 +22,19 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
 
     // Init
     useEffect(() => {
-        const delay = setTimeout(() => {
-            setInit(false); // On init
-        }, 3000);
+        let isActual = true;
+
+        Promise.all([
+            loadImage(phoneIosImage),
+            loadImage(phoneAndroidImage),
+        ]).then(() => {
+            if (isActual && init) {
+                setInit(false); // On init
+            }
+        });
 
         return () => {
-            clearTimeout(delay);
+            isActual = false;
         };
     }, []);
 
