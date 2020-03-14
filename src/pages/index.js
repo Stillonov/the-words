@@ -6,8 +6,6 @@ import Packshot from '../components/packshot';
 
 const IndexPage = () => (
     <LayoutMain>
-        <SEO />
-
         <Packshot
             slogans={[
                 `Keep calm
