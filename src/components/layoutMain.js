@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 import Header from './header';
 import Footer from './footer';
+import Seo from './seo';
 import styles from './layoutMain.module.scss';
 
 const LayoutMain = ({ children }) => (
     <>
+        <Seo />
         <Header
             description="Applications for anonymous story publishing and discussion"
         />
