@@ -10,10 +10,14 @@ const Packshot = ({ className, slogans }) => {
     const [init, setInit] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
+        const delay = setTimeout(() => {
             setInit(false);
-        }, 1000);
-    });
+        }, 2000);
+
+        return () => {
+            clearTimeout(delay);
+        }
+    }, []);
 
     const sloganByLine = slogans[0].split('\n');
 
@@ -29,19 +33,9 @@ const Packshot = ({ className, slogans }) => {
                 <AppLinks className={cn([styles.appLinks, 'd-md-none'])} />
             </Container>
 
-            <div className={styles.product}>
-                <div className={cn([
-                    styles.productAndroid,
-                    {
-                        [styles.productAndroidHidden]: init
-                    }
-                ])} />
-                <div className={cn([
-                    styles.productIos,
-                    {
-                        [styles.productIosHidden]: init
-                    }
-                ])} />
+            <div className={cn([styles.product, { [styles.productHidden]: init }])}>
+                <div className={styles.productAndroid} />
+                <div className={styles.productIos} />
             </div>
         </div>
     );
