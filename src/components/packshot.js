@@ -70,7 +70,7 @@ const Packshot = ({ slogans }) => {
     }, [sloganState]);
 
     return (
-        <div className={cn([styles.root, className])}>
+        <div className={styles.root}>
             <Container className={styles.container}>
                 <div className={cn([
                     styles.slogan,
