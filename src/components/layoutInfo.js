@@ -23,7 +23,7 @@ const LayoutInfo = ({ title, children }) => (
 );
 
 LayoutInfo.propTypes = {
-    title: PropTypes.node,
+    title: PropTypes.string,
     children: PropTypes.node.isRequired,
 };
 
