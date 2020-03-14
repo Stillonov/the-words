@@ -14,8 +14,7 @@ const Packshot = ({ slogans }) => {
 
     useEffect(() => {
         const delay = setTimeout(() => {
-            console.log('Init end');
-            setInit(false);
+            setInit(false); // Inited
         }, 3000);
 
         return () => {
@@ -29,7 +28,6 @@ const Packshot = ({ slogans }) => {
         }
 
         const delay = setTimeout(() => {
-            console.log('Slogan Out');
             setSloganState('Out');
         }, 6000);
 
