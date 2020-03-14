@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import Container from './container';
@@ -33,13 +32,5 @@ const Footer = () => (
         </Container>
     </footer>
 );
-
-Footer.propTypes = {
-    description: PropTypes.string,
-};
-
-Footer.defaultProps = {
-    description: '',
-};
 
 export default Footer;
