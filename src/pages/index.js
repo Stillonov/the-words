@@ -13,6 +13,7 @@ const IndexPage = () => {
         },
         footerLogoLink: 'https://yandex.ru',
         sloganDuration: 6000,
+        // Only 2 lines
         slogans: [
             `you are
             anonymous`,
