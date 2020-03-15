@@ -94,12 +94,16 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
         <div className={styles.root}>
             <Container className={styles.container}>
                 <div className={styles.slogan}>
-                    <div className={cn([
-                        styles.sloganPrefix,
-                        {
-                            [styles.sloganPrefixActive]: !init,
-                        },
-                    ])}>Keep calm</div>
+                    <div
+                        className={cn([
+                            styles.sloganPrefix,
+                            {
+                                [styles.sloganPrefixActive]: !init,
+                            },
+                        ])}
+                    >
+                        Keep calm
+                    </div>
 
                     <div className={styles.sloganFiller}>
                         <div>I</div>
