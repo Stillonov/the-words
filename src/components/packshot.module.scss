@@ -37,8 +37,6 @@
     white-space: nowrap;
     text-transform: uppercase;
     text-shadow: 0 0 30px rgba($color-black, 0.6);
-    will-change: opacity;
-    transition: opacity 0.8s ease-in;
 
     @media (min-width: $viewport--md) {
         font-size: 6vw;
@@ -54,10 +52,10 @@
     }
 
     div {
-        will-change: transform;
+        will-change: opacity, transform;
         transform: translateY(0);
         backface-visibility: hidden;
-        transition: transform 1.5s $ease-ou-cubic;
+        transition: opacity 0.8s ease-in, transform 1.5s $ease-ou-cubic;
 
         &:nth-child(1) {
             color: $color-secondary;
@@ -65,10 +63,11 @@
     }
 }
 
+.slogan--hidden,
 .slogan--in {
-    opacity: 0;
-
     div {
+        opacity: 0;
+
         &:nth-child(1) {
             transform: translateY(50%);
         }
@@ -91,19 +90,31 @@
     }
 }
 
-.slogan--active {
-    opacity: 1;
-
+.slogan--in {
     div {
+        &:nth-child(1) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.slogan--active {
+    div {
+        opacity: 1;
         transform: translateY(0);
     }
 }
 
 .slogan--out {
-    opacity: 0;
-
     div {
+        opacity: 0;
         transform: translateY(0);
+        transition: opacity 0.4s ease-in, transform 1.5s $ease-ou-cubic;
+
+        &:nth-child(1) {
+            opacity: 1;
+        }
     }
 }
 
