@@ -14,17 +14,14 @@ const IndexPage = () => {
         footerLogoLink: 'https://yandex.ru',
         sloganDuration: 6000,
         slogans: [
-            `Keep calm
-                you are
-                anonymous`,
+            `you are
+            anonymous`,
 
-            `Keep calm
-                & discuss other
-                people's stories`,
+            `& discuss other
+            people's stories`,
 
-            `Keep calm
-                & Write your
-                own story`,
+            `& Write your
+            own story`,
         ],
     };
 

@@ -66,13 +66,13 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
 
         if (sloganState === 'In') {
             nextState = 'Active';
-            lifetime = 400;
+            lifetime = 200;
         } else if (sloganState === 'Active') {
             nextState = 'Out';
             lifetime = sloganDuration;
         } else if (sloganState === 'Out') {
             nextState = 'In';
-            lifetime = 800;
+            lifetime = 400;
         }
 
         const delay = setTimeout(() => {
@@ -98,11 +98,12 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
                     className={cn([
                         styles.slogan,
                         {
-                            [styles.sloganIn]: init,
+                            [styles.sloganHidden]: init,
                             [styles[`slogan${sloganState}`]]: sloganState,
                         },
                     ])}
                 >
+                    <div>Keep calm</div>
                     {sloganByLine.map(line => {
                         return <div key={line}>{line}</div>;
                     })}
