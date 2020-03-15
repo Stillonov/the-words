@@ -6,22 +6,33 @@ import Header from './header';
 import Footer from './footer';
 import styles from './layoutMain.module.scss';
 
-const LayoutMain = ({ description, appLinks, footerLogoLink, children }) => (
+const LayoutMain = ({
+    description,
+    children,
+    footer,
+    title,
+    appLinks,
+    footerLogoLink,
+}) => (
     <>
-        <Seo />
+        <Seo title={title} />
         <Header description={description} />
         <main className={styles.main}>{children}</main>
-        <Footer appLinks={appLinks} footerLogoLink={footerLogoLink} />
+        {footer && (
+            <Footer appLinks={appLinks} footerLogoLink={footerLogoLink} />
+        )}
     </>
 );
 
 LayoutMain.propTypes = {
     description: PropTypes.string,
     children: PropTypes.node.isRequired,
+    footer: PropTypes.bool,
 };
 
 LayoutMain.defaultProps = {
     description: 'Applications for anonymous story publishing and discussion',
+    footer: false,
 };
 
 export default LayoutMain;

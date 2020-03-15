@@ -30,6 +30,7 @@ const IndexPage = () => {
 
     return (
         <LayoutMain
+            footer
             description={pageConfig.description}
             appLinks={pageConfig.appLinks}
             footerLogoLink={pageConfig.footerLogoLink}
