@@ -115,6 +115,22 @@
         &:nth-child(1) {
             opacity: 1;
         }
+
+        &:nth-child(2) {
+            transform: translateY(-20%);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-40%);
+        }
+
+        &:nth-child(4) {
+            transform: translateY(-60%);
+        }
+
+        &:nth-child(5) {
+            transform: translateY(-80%);
+        }
     }
 }
 
