@@ -1,13 +1,18 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import LayoutMain from '../components/layoutMain';
-import SEO from '../components/seo';
+import PageMessage from '../components/pageMessage';
 
 const NotFoundPage = () => (
-    <LayoutMain>
-        <SEO title="404: Not found" />
-        <h1>NOT FOUND</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <LayoutMain title="404: Not found">
+        <PageMessage>
+            <h1>NOT FOUND</h1>
+            <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+            <p>
+                Go to the <Link to="/">Main Page</Link>
+            </p>
+        </PageMessage>
     </LayoutMain>
 );
 

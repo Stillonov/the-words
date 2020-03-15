@@ -30,4 +30,8 @@ p {
 
 a {
     color: $color-link;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
