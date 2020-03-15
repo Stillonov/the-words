@@ -28,7 +28,7 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
             loadImage(phoneIosImage),
             loadImage(phoneAndroidImage),
         ]).then(() => {
-            if (isActual && init) {
+            if (isActual) {
                 setInit(false); // On init
             }
         });
