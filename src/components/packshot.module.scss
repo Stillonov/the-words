@@ -28,6 +28,7 @@
 }
 
 .slogan {
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: $font-family--secondary;
@@ -37,6 +38,7 @@
     white-space: nowrap;
     text-transform: uppercase;
     text-shadow: 0 0 30px rgba($color-black, 0.6);
+    user-select: none;
 
     @media (min-width: $viewport--md) {
         font-size: 6vw;
@@ -53,84 +55,81 @@
 
     div {
         will-change: opacity, transform;
-        transform: translateY(0);
         backface-visibility: hidden;
-        transition: opacity 0.8s ease-in, transform 1.5s $ease-ou-cubic;
-
-        &:nth-child(1) {
-            color: $color-secondary;
-        }
     }
 }
 
-.slogan--hidden,
-.slogan--in {
+.slogan-prefix {
+    opacity: 0;
+    color: $color-secondary;
+    transform: translateY(50%);
+}
+
+.slogan-prefix--active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in, transform 1.7s $ease-ou-cubic;
+}
+
+.slogan-filler {
+    opacity: 0;
+    visibility: hidden;
+    color: transparent;
+}
+
+.slogan-postfix {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
     div {
         opacity: 0;
+        transition: opacity 1s ease-in, transform 1s ease-in-out;
 
         &:nth-child(1) {
-            transform: translateY(50%);
+            transform: translateY(-20%);
         }
 
         &:nth-child(2) {
-            transform: translateY(100%);
-        }
-
-        &:nth-child(3) {
-            transform: translateY(150%);
-        }
-
-        &:nth-child(4) {
-            transform: translateY(200%);
-        }
-
-        &:nth-child(5) {
-            transform: translateY(250%);
+            transform: translateY(-40%);
         }
     }
 }
 
-.slogan--in {
+.slogan-postfix--in {
     div {
+        opacity: 0;
+        transition: none;
+
         &:nth-child(1) {
-            opacity: 1;
+            transform: translateY(100%);
+        }
+
+        &:nth-child(2) {
+            transform: translateY(200%);
+        }
+    }
+}
+
+.slogan-postfix--active,
+.slogan-postfix--active-slow {
+    div {
+        opacity: 1;
+        transition: opacity 0.5s ease-in, transform 1s $ease-ou-cubic;
+
+        &:nth-child(1) {
+            transform: translateY(0);
+        }
+
+        &:nth-child(2) {
             transform: translateY(0);
         }
     }
 }
 
-.slogan--active {
+.slogan-postfix--active-slow {
     div {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.slogan--out {
-    div {
-        opacity: 0;
-        transform: translateY(0);
-        transition: opacity 0.4s ease-in, transform 1.5s $ease-ou-cubic;
-
-        &:nth-child(1) {
-            opacity: 1;
-        }
-
-        &:nth-child(2) {
-            transform: translateY(-20%);
-        }
-
-        &:nth-child(3) {
-            transform: translateY(-40%);
-        }
-
-        &:nth-child(4) {
-            transform: translateY(-60%);
-        }
-
-        &:nth-child(5) {
-            transform: translateY(-80%);
-        }
+        transition: opacity 1s ease-in, transform 1.7s $ease-ou-cubic;
     }
 }
 

@@ -16,7 +16,6 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
     });
     const [init, setInit] = useState(true);
     const currentSlogan = useRef(0);
-    const sloganByLine = shuffledSlogans[currentSlogan.current].split('\n');
     const [sloganState, setSloganState] = useState(null);
     const prevSloganState = useRef(null);
 
@@ -72,7 +71,7 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
             lifetime = sloganDuration;
         } else if (sloganState === 'Out') {
             nextState = 'In';
-            lifetime = 400;
+            lifetime = 0;
         }
 
         const delay = setTimeout(() => {
@@ -94,18 +93,48 @@ const Packshot = ({ sloganDuration, slogans, appLinks }) => {
     return (
         <div className={styles.root}>
             <Container className={styles.container}>
-                <div
-                    className={cn([
-                        styles.slogan,
+                <div className={styles.slogan}>
+                    <div className={cn([
+                        styles.sloganPrefix,
                         {
-                            [styles.sloganHidden]: init,
-                            [styles[`slogan${sloganState}`]]: sloganState,
+                            [styles.sloganPrefixActive]: !init,
                         },
-                    ])}
-                >
-                    <div>Keep calm</div>
-                    {sloganByLine.map(line => {
-                        return <div key={line}>{line}</div>;
+                    ])}>Keep calm</div>
+
+                    <div className={styles.sloganFiller}>
+                        <div>I</div>
+                        <div>I</div>
+                    </div>
+
+                    {shuffledSlogans.map((slogan, index) => {
+                        const sloganByLine = slogan.split('\n');
+
+                        return (
+                            <div
+                                key={index}
+                                className={cn([
+                                    styles.sloganPostfix,
+                                    {
+                                        [styles.sloganPostfixIn]: init,
+                                        [styles.sloganPostfixActiveSlow]:
+                                            !init &&
+                                            !sloganState &&
+                                            currentSlogan.current === index,
+                                        [styles[`sloganPostfix${sloganState}`]]:
+                                            sloganState &&
+                                            currentSlogan.current === index,
+                                    },
+                                ])}
+                            >
+                                {sloganByLine.map((line, index) => {
+                                    if (index > 1) {
+                                        return null;
+                                    }
+
+                                    return <div key={line}>{line}</div>;
+                                })}
+                            </div>
+                        );
                     })}
                 </div>
 
