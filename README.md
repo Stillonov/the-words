@@ -1,6 +1,6 @@
 # The Words
 
-**Technologies**  
+**Build result**  
 [https://stillonov.github.io/the-words/](https://stillonov.github.io/the-words/)
 
 **Technologies**  
