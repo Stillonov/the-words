@@ -2,5 +2,5 @@
 
 [Build result](https://stillonov.github.io/the-words/)
 
-#### Technologies
+**Technologies**  
 Gatsby, React, CSS Modules, SCSS
