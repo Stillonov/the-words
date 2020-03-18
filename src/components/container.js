@@ -10,10 +10,7 @@ const Container = ({ className, children }) => (
 
 Container.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node,
-    ]),
+    children: PropTypes.node,
 };
 
 Container.defaultProps = {
