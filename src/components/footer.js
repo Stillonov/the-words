@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import Container from './container';
 import AppLinks from './appLinks';
 import styles from './footer.module.scss';
 import LogoUnionSvg from '../images/logo-union.inline.svg';
-import PropTypes from 'prop-types';
 
 const Footer = ({ appLinks, footerLogoLink }) => (
     <footer className={styles.root}>
