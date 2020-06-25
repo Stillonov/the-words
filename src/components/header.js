@@ -7,32 +7,28 @@ import Container from './container';
 import styles from './header.module.scss';
 import LogoTheWordsSvg from '../images/logo-the-words.inline.svg';
 
-const Header = props => {
-    const { info, title, description } = props;
+const Header = ({ info, title, description }) => (
+    <header
+        className={cn([
+            styles.root,
+            {
+                [styles.rootInfo]: info,
+            },
+        ])}
+    >
+        <Container className={styles.container}>
+            <Link className={styles.logo} to="/">
+                <LogoTheWordsSvg />
+            </Link>
 
-    return (
-        <header
-            className={cn([
-                styles.root,
-                {
-                    [styles.rootInfo]: info,
-                },
-            ])}
-        >
-            <Container className={styles.container}>
-                <Link className={styles.logo} to="/">
-                    <LogoTheWordsSvg />
-                </Link>
+            {description && (
+                <div className={styles.description}>{description}</div>
+            )}
 
-                {description && (
-                    <div className={styles.description}>{description}</div>
-                )}
-
-                {title && <div className={styles.title}>{title}</div>}
-            </Container>
-        </header>
-    );
-};
+            {title && <div className={styles.title}>{title}</div>}
+        </Container>
+    </header>
+);
 
 Header.propTypes = {
     info: PropTypes.bool,
